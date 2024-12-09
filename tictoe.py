@@ -1,13 +1,9 @@
 import random
 
-
 def pnt(mtx):
    for row in mtx:
        print(" | ".join(row))
    print()
-
-
-
 
 def done(mtx) :
    for row in mtx :
@@ -16,10 +12,7 @@ def done(mtx) :
                return False
    return True
 
-
 def win(mtx, c) :
-
-
    flag = 1
    for i in range(3) :
        flag = 1
@@ -29,8 +22,6 @@ def win(mtx, c) :
                break
        if(flag) :
            return True
-
-
    flag = 1
    for i in range(3):
        flag = 1
@@ -40,8 +31,6 @@ def win(mtx, c) :
                break
        if (flag):
            return True
-
-
    flag = 1
    for i in range(3):
        if mtx[i][i] != c :
@@ -49,8 +38,6 @@ def win(mtx, c) :
            break
    if(flag) :
        return True
-
-
    flag = 1
    for i in range(3):
        if mtx[i][2 - i] != c:
@@ -58,10 +45,7 @@ def win(mtx, c) :
            break
    if (flag):
        return True
-
-
    return False
-
 
 def opMove(mtx):
    while True:
@@ -69,7 +53,6 @@ def opMove(mtx):
        col = random.randint(0, 2)
        if mtx[row][col] == "_":
            return [row, col]
-
 
 mtx = [['_', '_', '_'], ['_', '_', '_'], ['_', '_', '_']]
 pnt(mtx)
